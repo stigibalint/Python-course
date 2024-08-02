@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tanulás - PythonMaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="learn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+</script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <svg class="python-logo" width="50" height="50" viewBox="0 0 100 100">
+                    <path d="M50 0C22.4 0 24.2 11.1 24.2 11.1l.1 11.5h26.2v3.7H15.8s-15.6-1.8-15.6 22.9 13.6 23.8 13.6 23.8h8.1v-11.5s-.4-13.6 13.4-13.6h26s14.6.2 14.6-14.1V11.1S77.6 0 50 0zM36.4 6.4c2.6 0 4.7 2.1 4.7 4.7s-2.1 4.7-4.7 4.7-4.7-2.1-4.7-4.7 2.1-4.7 4.7-4.7z" fill="#5D3FD3" />
+                    <path d="M50.3 100c27.6 0 25.8-11.1 25.8-11.1l-.1-11.5H49.8v-3.7h34.7s15.6 1.8 15.6-22.9c0-24.7-13.6-23.8-13.6-23.8h-8.1V38.5s.4 13.6-13.4 13.6h-26S24.4 51.9 24.4 66.2V89s-1.7 11 25.9 11zM63.9 93.6c-2.6 0-4.7-2.1-4.7-4.7s2.1-4.7 4.7-4.7 4.7 2.1 4.7 4.7-2.1 4.7-4.7 4.7z" fill="#FFD700" />
+                </svg>
+                 <span style="margin-left: 15px;">PythonMaster</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Kezdőlap</a></li>
+                <li><a href="learn.html"><i class="fas fa-book"></i> Tanulás</a></li>
+                <li><a href="challanges.html" class="active"><i class="fas fa-trophy"></i> Napi Kihívások</a></li>
+     
+            
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <main class="learn-container">
+            <aside class="lesson-list">
+                <h2><i class="fas fa-book"></i> Leckék</h2>
+                <div class="level-selector">
+                    <span class="level-title">Alapok</span>
+                    <i class="fas fa-chevron-right toggle-level"></i>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="lessonSearch" placeholder="Keresés a leckék között...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="lessonProgress"></div>
+                </div>
+                <p class="progress-text">Haladás: <span id="progressPercentage">0%</span></p>
+                <ul class="basic-lessons">
+                    <li><a href="#"  data-lesson="0"><i class="fas fa-cogs"></i> 0. Python telepítése</a></li>
+                    <li><a href="#" class="active" data-lesson="1"><i class="fas fa-play"></i> 1. Bevezetés a Pythonba</a></li>
+                    <li><a href="#" data-lesson="2"><i class="fas fa-code"></i> 2. Változók és adattípusok</a></li>
+                    <li><a href="#" data-lesson="3"><i class="fas fa-random"></i> 3. Vezérlési szerkezetek</a></li>
+                    <li><a href="#" data-lesson="4"><i class="fas fa-cube"></i> 4. Függvények</a></li>
+                    <li><a href="#" data-lesson="5"><i class="fas fa-list-ol"></i> 5. Listák és ciklusok</a></li>
+                    <li><a href="#" data-lesson="6"><i class="fas fa-database"></i> 6. Szótárak és halmazok</a></li>
+                    <li><a href="#" data-lesson="7"><i class="fas fa-file-alt"></i> 7. Fájlkezelés</a></li>
+                    <li><a href="#" data-lesson="8"><i class="fas fa-exclamation-triangle"></i> 8. Kivételkezelés</a></li>
+                    <li><a href="#" data-lesson="9"><i class="fas fa-arrow-right"></i> 9. Lambda függvények</a></li>
+                    <li><a href="#" data-lesson="10"><i class="fas fa-expand"></i> 10. Hatókör (Scope)</a></li>
+                    <li><a href="#" data-lesson="11"><i class="fas fa-square-root-alt"></i> 11. Matematikai műveletek (Math)</a></li>
+                    <li><a href="#" data-lesson="12"><i class="fas fa-puzzle-piece"></i> 12. Modulok és csomagok</a></li>
+                    <li><a href="#" data-lesson="13"><i class="fas fa-object-group"></i> 13. Objektumorientált programozás</a></li>
+         
+
+                </ul>
+                <ul class="advanced-lessons" style="display: none;">
+                    <li><a href="#" data-lesson="14"><i class="fas fa-calculator"></i> 14. Egyszerű számológép projekt</a></li>
+                    <li><a href="#" data-lesson="15"><i class="fas fa-dice"></i> 15. Játék fejlesztés: Kő-papír-olló</a></li>
+                    <li><a href="#" data-lesson="16"><i class="fas fa-sort"></i> 16. Rendezési algoritmusok</a></li>
+                    <li><a href="#" data-lesson="17"><i class="fas fa-search"></i> 17. Keresési algoritmusok</a></li>
+                    <li><a href="#" data-lesson="18"><i class="fas fa-project-diagram"></i> 18. Rekurzió alapjai</a></li>
+
+                </ul>
+            </aside>
+            <section class="lesson-content">
+                <div class="code-editor">
+                    <textarea id="code-input"></textarea>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rólunk</h3>
+                <p>A PythonMaster egy innovatív platform, amely segít a Python programozás elsajátításában.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Gyors linkek</h3>
+                <ul>
+                    <li><a href="#">Kezdőlap</a></li>
+                    <li><a href="#">Kurzusok</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kövess minket</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PythonMaster. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+    <script src="learn.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+.challenge-list li {
+    margin-bottom: 1rem;
+}
+
+.challenge-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    display: block;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.challenge-list a:hover, .challenge-list a.active {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    transform: translateX(10px);
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color : #5D3FD3;
+    display: flex;
+    align-items: center;
+}
+.back-button {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.back-button:hover {
+    color: var(--primary-color);
+}
+
+.submit-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.code-editor {
+    margin-top: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.CodeMirror {
+    height: auto;
+    min-height: 200px;
+}
+
+pre code.hljs {
+    background-color: #282c34;
+    color: #abb2bf;
+}

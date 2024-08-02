@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PythonMaster - Egyedi Python Kurzus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <svg class="python-logo" width="50" height="50" viewBox="0 0 100 100">
+                    <path d="M50 0C22.4 0 24.2 11.1 24.2 11.1l.1 11.5h26.2v3.7H15.8s-15.6-1.8-15.6 22.9 13.6 23.8 13.6 23.8h8.1v-11.5s-.4-13.6 13.4-13.6h26s14.6.2 14.6-14.1V11.1S77.6 0 50 0zM36.4 6.4c2.6 0 4.7 2.1 4.7 4.7s-2.1 4.7-4.7 4.7-4.7-2.1-4.7-4.7 2.1-4.7 4.7-4.7z" fill="#5D3FD3" />
+                    <path d="M50.3 100c27.6 0 25.8-11.1 25.8-11.1l-.1-11.5H49.8v-3.7h34.7s15.6 1.8 15.6-22.9c0-24.7-13.6-23.8-13.6-23.8h-8.1V38.5s.4 13.6-13.4 13.6h-26S24.4 51.9 24.4 66.2V89s-1.7 11 25.9 11zM63.9 93.6c-2.6 0-4.7-2.1-4.7-4.7s2.1-4.7 4.7-4.7 4.7 2.1 4.7 4.7-2.1 4.7-4.7 4.7z" fill="#FFD700" />
+                </svg>
+                 <span style="margin-left: 15px;">PythonMaster</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Kezdőlap</a></li>
+                <li><a href="#features">Jellemzők</a></li>
+                <li><a href="#curriculum">Tananyag</a></li>
+                <li><a href="#pricing">Árak</a></li>
+                <li><a href="#" class="cta-button nav-cta">Vásárlás</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Fedezd fel a Python világát</h1>
+                    <p class="subtitle">Interaktív tanulás, valós projektek</p>
+                    <a href="learn.html" class="cta-button pulse">Kezdd el most!</a>
+                </div>
+                <div class="hero-visual">
+                    <div id="python-3d-logo"></div>
+                    <div class="code-snippet">
+                        <pre><code id="animated-code"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Miért a PythonMaster?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card" data-speed="0.05">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock" style="font-size: 100px; color: #5D3FD3;"></i>
+                        </div>
+                        <h3>Interaktív tanulás</h3>
+                        <p>Valós idejű visszajelzés és gyakorlatok</p>
+                    </div>
+                    <div class="feature-card" data-speed="0.1">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code" style="font-size: 100px; color: #5D3FD3;"></i>
+                        </div>
+                        <h3>Gyakorlati projektek</h3>
+                        <p>Valós világból vett példák és feladatok</p>
+                    </div>
+                    <div class="feature-card" data-speed="0.15">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap" style="font-size: 100px; color: #5D3FD3;"></i>
+                        </div>
+                        <h3>Személyre szabott</h3>
+                        <p>A te tempódban, a te céljaidért</p>
+                    </div>
+                    <div class="feature-card" data-speed="0.2">
+                        <div class="feature-icon">
+                            <i class="fas fa-users" style="font-size: 100px; color: #5D3FD3;"></i>
+                        </div>
+                        <h3>Közösségi támogatás</h3>
+                        <p>Tanulj együtt másokkal, ossz meg tapasztalatokat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Válassz csomagot</h2>
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Alap csomag</h3>
+                            <p class="price">4999Ft</p>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Teljes kurzus hozzáférés</li>
+                            <li><i class="fas fa-check"></i> Gyakorlati projektek</li>
+                            <li><i class="fas fa-check"></i> Közösségi fórum</li>
+                            <li><i class="fas fa-times"></i> Személyes mentorálás</li>
+                            <li><i class="fas fa-times"></i> Karrier tanácsadás</li>
+                        </ul>
+                        <a href="#" class="btn">Választom</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="pricing-header">
+                            <h3>Pro csomag</h3>
+                            <p class="price">8999FT</p>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Minden az Alap csomagban</li>
+                            <li><i class="fas fa-check"></i> Személyes mentorálás</li>
+                            <li><i class="fas fa-check"></i> Karrier tanácsadás</li>
+                            <li><i class="fas fa-check"></i> Egyedi projektek</li>
+                            <li><i class="fas fa-check"></i> Élethosszig tartó hozzáférés</li>
+                        </ul>
+                        <a href="#" class="btn">Választom</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2024 PythonMaster. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
